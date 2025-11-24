@@ -1,4 +1,8 @@
-## Hi there 👋
+👋 Yo! I'm Dhanush
+💻 I code.
+🚀 I learn.
+🎯 I build things that make life easier.
+Follow my journey — more exciting projects are on the way 😄🔥
 
 ### 🛠️ Languages and Tools
 
