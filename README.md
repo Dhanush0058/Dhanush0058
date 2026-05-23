@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/dhanushr672" target="blank"><img src="https://img.shields.io/twitter/follow/dhanushr672?logo=twitter&style=for-the-badge" alt="dhanushr672" /></a> </p>
 
-- 🌱 I’m currently learning **AI/ML and improving my problem-solving skills through DSA**
+- 🌱 I’m improving my problem-solving skills through DSA**
 
 - 👨‍💻 All of my projects are available at [https://dhanush-reddy.vercel.app/](https://dhanush-reddy.vercel.app/)
 
