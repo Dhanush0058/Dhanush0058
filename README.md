@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Dhanush reddy</h1>
-<h3 align="center">IT Student | Learning, Building, and Improving Every Day</h3>
+<h3 align="center">IT Student | Data Scientist | Learning, Building, and Improving Every Day</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dhanush0058&label=Profile%20views&color=0e75b6&style=flat" alt="dhanush0058" /> </p>
 
