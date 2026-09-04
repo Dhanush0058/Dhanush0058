@@ -20,26 +20,25 @@ def process():
     
     # Green range
     lower_green = np.array([35, 40, 40])
-    upper_green = np.array([85, 255, 255])
+    upper_green = np.array([90, 255, 255])
     
     mask = cv2.inRange(hsv, lower_green, upper_green)
     kernel = np.ones((3,3), np.uint8)
-    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
-    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel, iterations=1)
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=2)
     
     mask_inv = cv2.bitwise_not(mask)
+    # Erode the person mask to remove all green edge fringes
+    mask_inv = cv2.erode(mask_inv, kernel, iterations=1)
     mask_inv = cv2.GaussianBlur(mask_inv, (3, 3), 0)
     
     b, g, r = cv2.split(img)
     rgba = cv2.merge([r, g, b, mask_inv])
     
-    # Calculate brightness for 3D depth dot sizing
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
-    # 3D Dotted Halftone Printer Effect
+    # 3D Dotted Mosaic Effect
     frames = []
     
-    grid_size = 4  # Spacing between dots (clearer image)
+    grid_size = 3  # Tighter spacing for much higher resolution
+    radius = 1.5   # Constant size so the dark hoodie stays solid
     
     # Precalculate all dots
     dots = []
@@ -49,9 +48,6 @@ def process():
             # Check mask
             if mask_inv[y, x] > 50: # if not transparent
                 color = rgba[y, x].tolist() # [r, g, b, a]
-                brightness = gray[y, x]
-                # Map brightness to radius. Lighter areas = bigger dots (for dark themes)
-                radius = max(1.0, (brightness / 255.0) * (grid_size / 1.1))
                 row_dots.append((x, y, radius, tuple(color)))
         if row_dots:
             dots.append(row_dots)
@@ -72,13 +68,13 @@ def process():
         # Draw this row
         for x, y, r, color in row:
             # Draw a slight drop shadow for 3D effect
-            draw.ellipse([x-r+1, y-r+1, x+r+1, y+r+1], fill=(0,0,0,150))
+            draw.ellipse([x-r+1, y-r+1, x+r+1, y+r+1], fill=(0,0,0,100))
             # Draw the actual dot
             draw.ellipse([x-r, y-r, x+r, y+r], fill=color)
             
-        # Save a frame every row to make animation smooth
+        # Save a frame every 3 rows for a smooth printing speed
         frame_counter += 1
-        if frame_counter % 2 == 0:
+        if frame_counter % 3 == 0:
             frames.append(canvas.copy())
             
     # Add final frame multiple times to pause at the end
@@ -91,7 +87,7 @@ def process():
         format='GIF',
         save_all=True,
         append_images=frames[1:],
-        duration=40,
+        duration=30,
         loop=0,
         disposal=2,
         transparency=0
