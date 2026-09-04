@@ -81,10 +81,39 @@ You can self-host it on Vercel and replace the URL below with your own.
 </p>
 -->
 
-### 📊 GitHub Metrics
+### 📊 GitHub Stats
 
 <div align="center">
-  <img src="github-metrics.svg" alt="GitHub Metrics" />
+  <a href="http://www.github.com/Dhanush0058">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=dhanush0058&show_icons=true&hide=&count_private=true&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true" alt="Dhanush0058's GitHub stats" height="195" />
+  </a>
+  <a href="http://www.github.com/Dhanush0058">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=dhanush0058&layout=compact&langs_count=10&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" height="195" />
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="http://www.github.com/Dhanush0058">
+    <img src="https://streak-stats.demolab.com/?user=Dhanush0058&stroke=3382ed&background=22272e&ring=facc15&fire=facc15&currStreakNum=3382ed&currStreakLabel=facc15&sideNums=3382ed&sideLabels=3382ed&dates=3382ed&hide_border=true" alt="GitHub Streak" height="195" />
+  </a>
+</div>
+
+### 📈 Activity Graph
+
+<p align="center">
+  <a href="https://github.com/Dhanush0058">
+    <img src="https://github-readme-activity-graph-ashy.vercel.app/graph?username=Dhanush0058&bg_color=22272e&color=facc15&line=3382ed&point=ec4899&area=true&hide_border=true" alt="Activity Graph" />
+  </a>
+</p>
+
+### 📌 Top Repositories
+
+<div align="center">
+  <a href="https://github.com/Dhanush0058/SnapClass-Smart-Attendance">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=dhanush0058&repo=SnapClass-Smart-Attendance&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true&locale=en&v=1" alt="SnapClass-Smart-Attendance" />
+  </a>
 </div>
 
 
