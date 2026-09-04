@@ -87,10 +87,4 @@ You can self-host it on Vercel and replace the URL below with your own.
   <img src="github-metrics.svg" alt="GitHub Metrics" />
 </div>
 
-### 📌 Top Repositories
 
-<div align="center">
-  <a href="https://github.com/Dhanush0058/SnapClass-Smart-Attendance">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=dhanush0058&repo=SnapClass-Smart-Attendance&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true&locale=en&v=1" alt="SnapClass-Smart-Attendance" />
-  </a>
-</div>
