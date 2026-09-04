@@ -6,7 +6,7 @@ Passionate AI & Data Science enthusiast with a strong interest in Machine Learni
 
 * 🌍  I'm based in India
 * 🖥️  See my portfolio at [dhanush-reddy.vercel.app/](https://dhanush-reddy.vercel.app/)
-* 📄  View my Resume at [Google Docs](https://docs.google.com/document/d/1ngnIMtYAxRsyxbRFGTbHIWJ5UROQfUrg/edit#heading=h.lgeq8j6mcbf0)
+* 📄  View my Resume at [My Resume](https://docs.google.com/document/d/1ngnIMtYAxRsyxbRFGTbHIWJ5UROQfUrg/edit#heading=h.lgeq8j6mcbf0)
 * ✉️  You can contact me at [dhanushr672@gmail.com](mailto:dhanushr672@gmail.com)
 * 🧠  I'm currently learning LangChain, LangGraph, RAG, FastAPI, Agentic AI & LLM Applications
 * 👥  I'm looking to collaborate on AI/ML, Generative AI, Open Source & Full-Stack Projects
