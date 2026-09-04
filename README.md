@@ -6,12 +6,18 @@ Passionate AI & Data Science enthusiast with a strong interest in Machine Learni
 
 * 🌍  I'm based in India
 * 🖥️  See my portfolio at [dhanush-reddy.vercel.app/](https://dhanush-reddy.vercel.app/)
+* 📄  View my Resume at [Google Docs](https://docs.google.com/document/d/1ngnIMtYAxRsyxbRFGTbHIWJ5UROQfUrg/edit#heading=h.lgeq8j6mcbf0)
 * ✉️  You can contact me at [dhanushr672@gmail.com](mailto:dhanushr672@gmail.com)
 * 🧠  I'm currently learning LangChain, LangGraph, RAG, FastAPI, Agentic AI & LLM Applications
 * 👥  I'm looking to collaborate on AI/ML, Generative AI, Open Source & Full-Stack Projects
 * 💬  Ask me about: I enjoy turning ideas into intelligent applications. 🚀
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=dhanush0058&label=Profile%20views&color=ec4899&style=flat" alt="dhanush0058" /> </p>
+<p align="left"> 
+  <img src="https://komarev.com/ghpvc/?username=dhanush0058&label=Profile%20views&color=ec4899&style=flat" alt="dhanush0058" />
+  <a href="https://docs.google.com/document/d/1ngnIMtYAxRsyxbRFGTbHIWJ5UROQfUrg/edit#heading=h.lgeq8j6mcbf0" target="_blank">
+    <img src="https://img.shields.io/badge/-View_My_Resume-3382ed?style=flat&logo=google-docs&logoColor=white" alt="View Resume" />
+  </a>
+</p>
 
 ### Skills
 <p align="left">
@@ -105,7 +111,7 @@ You can self-host it on Vercel and replace the URL below with your own.
 ### 📌 Top Repositories
 
 <div align="center">
-  <a href="https://github.com/Dhanush0058/SnapClass-Making-Attendance-Faster-Using-AI">
-    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=dhanush0058&repo=SnapClass-Smart-Attendance&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true&locale=en&v=1" alt="SnapClass-Making-Attendance-Faster-Using-AI" />
+  <a href="https://github.com/Dhanush0058/SnapClass-Smart-Attendance">
+    <img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=dhanush0058&repo=SnapClass-Smart-Attendance&title_color=facc15&text_color=3382ed&icon_color=ec4899&bg_color=22272e&hide_border=true&locale=en&v=1" alt="SnapClass-Smart-Attendance" />
   </a>
 </div>
