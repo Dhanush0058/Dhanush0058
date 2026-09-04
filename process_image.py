@@ -10,7 +10,7 @@ def process():
         print("Error: Could not load profile.jpg")
         return
         
-    # Resize first to speed up processing
+    # Resize
     height, width = img.shape[:2]
     new_width = 300
     new_height = int((new_width / width) * height)
@@ -18,13 +18,11 @@ def process():
     
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     
-    # Green range - optimized for the typical green screen in the photo
+    # Green range
     lower_green = np.array([35, 40, 40])
     upper_green = np.array([85, 255, 255])
     
     mask = cv2.inRange(hsv, lower_green, upper_green)
-    
-    # Refine mask with morphology
     kernel = np.ones((3,3), np.uint8)
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel, iterations=1)
@@ -35,43 +33,57 @@ def process():
     b, g, r = cv2.split(img)
     rgba = cv2.merge([r, g, b, mask_inv])
     
-    pil_img = Image.fromarray(rgba)
+    # Calculate brightness for 3D depth dot sizing
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
-    # Create the "printer" effect frames
+    # 3D Dotted Halftone Printer Effect
     frames = []
     
-    # The printer moves down chunk by chunk
-    chunk_size = 8
+    grid_size = 5  # Spacing between dots
     
+    # Precalculate all dots
+    dots = []
+    for y in range(0, new_height, grid_size):
+        row_dots = []
+        for x in range(0, new_width, grid_size):
+            # Check mask
+            if mask_inv[y, x] > 50: # if not transparent
+                color = rgba[y, x].tolist() # [r, g, b, a]
+                brightness = gray[y, x]
+                # Map brightness to radius. Lighter areas = bigger dots (for dark themes)
+                radius = max(1.0, (brightness / 255.0) * (grid_size / 1.2))
+                row_dots.append((x, y, radius, tuple(color)))
+        if row_dots:
+            dots.append(row_dots)
+            
     print("Generating frames...")
-    # Add initial empty frames
+    
+    # Base transparent canvas
+    canvas = Image.new("RGBA", (new_width, new_height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
+    
+    # Add initial frames
     for _ in range(5):
-        frames.append(Image.new("RGBA", (new_width, new_height), (0, 0, 0, 0)))
+        frames.append(canvas.copy())
         
-    for y in range(0, new_height + chunk_size, chunk_size):
-        # Create empty transparent frame
-        frame = Image.new("RGBA", (new_width, new_height), (0, 0, 0, 0))
-        
-        # Crop the image up to y
-        if y > 0:
-            box = (0, 0, new_width, min(y, new_height))
-            region = pil_img.crop(box)
-            frame.paste(region, box)
+    # Print row by row
+    frame_counter = 0
+    for row in dots:
+        # Draw this row
+        for x, y, r, color in row:
+            # Draw a slight drop shadow for 3D effect
+            draw.ellipse([x-r+1, y-r+1, x+r+1, y+r+1], fill=(0,0,0,150))
+            # Draw the actual dot
+            draw.ellipse([x-r, y-r, x+r, y+r], fill=color)
             
-        # Draw a "printer head" / scanline at the current y
-        if y < new_height:
-            draw = ImageDraw.Draw(frame)
-            # Glowing cyan scanline
-            draw.line([(0, y), (new_width, y)], fill=(0, 255, 255, 200), width=3)
-            # Dotted line
-            for x in range(0, new_width, 10):
-                draw.rectangle([x, y, x+4, y+4], fill=(255, 255, 255, 255))
+        # Save a frame every 2 rows to make animation speed optimal
+        frame_counter += 1
+        if frame_counter % 2 == 0:
+            frames.append(canvas.copy())
             
-        frames.append(frame)
-        
-    # Add a few frames of the finished image at the end
-    for _ in range(15):
-        frames.append(pil_img)
+    # Add final frame multiple times to pause at the end
+    for _ in range(20):
+        frames.append(canvas.copy())
         
     print("Saving GIF...")
     frames[0].save(
@@ -79,7 +91,7 @@ def process():
         format='GIF',
         save_all=True,
         append_images=frames[1:],
-        duration=100,
+        duration=40,
         loop=0,
         disposal=2,
         transparency=0
