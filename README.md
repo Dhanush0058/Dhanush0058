@@ -1,3 +1,10 @@
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=3382ed&width=800&lines=Hi+%F0%9F%91%8B+My+name+is+Dhanush+Reddy;AI%2FML+Enthusiast+%26+Developer;Data+Scientist;Always+Learning+and+Building" alt="Typing SVG" /></a>
+
+### IT Student | Data Scientist | Learning, Building, and Improving Every Day
+
+Passionate AI & Data Science enthusiast with a strong interest in Machine Learning, Generative AI, and Full-Stack Development. I enjoy building intelligent applications that solve real-world problems and continuously explore new technologies. Currently working as an AI/ML Intern while expanding my knowledge in LangChain, LangGraph, RAG, FastAPI, and Agentic AI. I believe in continuous learning, open-source collaboration, and creating impactful software.
+
+* 🌍  I'm based in India
 * 🖥️  See my portfolio at [dhanush-reddy.vercel.app/](https://dhanush-reddy.vercel.app/)
 * 📄  View my Resume at [My Resume](https://docs.google.com/document/d/1ngnIMtYAxRsyxbRFGTbHIWJ5UROQfUrg/edit#heading=h.lgeq8j6mcbf0)
 * ✉️  You can contact me at [dhanushr672@gmail.com](mailto:dhanushr672@gmail.com)
