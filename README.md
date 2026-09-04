@@ -104,7 +104,7 @@ You can self-host it on Vercel and replace the URL below with your own.
 
 <p align="center">
   <a href="https://github.com/Dhanush0058">
-    <img src="https://github-readme-activity-graph-ashy.vercel.app/graph?username=Dhanush0058&bg_color=22272e&color=facc15&line=3382ed&point=ec4899&area=true&hide_border=true" alt="Activity Graph" />
+    <img src="https://readme-delta-three.vercel.app/graph?username=Dhanush0058&bg_color=22272e&color=facc15&line=3382ed&point=ec4899&area=true&hide_border=true" alt="Activity Graph" />
   </a>
 </p>
 
