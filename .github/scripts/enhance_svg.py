@@ -54,6 +54,9 @@ def update_stats_in_svg(svg_content, stats):
     forks_pattern = r'(\. Forks:\s*</tspan><tspan[^>]*>[^<]*</tspan><tspan[^>]*>\s*)\d+(</tspan>)'
     svg_content = re.sub(forks_pattern, rf'\g<1>{stats["forks"]}\g<2>', svg_content)
 
+    website_pattern = r'(\. Website:\s*</tspan><tspan[^>]*>)\.{6,20}(</tspan><tspan[^>]*>\s*)https://[^<]+(</tspan>)'
+    svg_content = re.sub(website_pattern, r'\g<1>.........\g<2>https://dhanushreddy-dev.vercel.app/\g<3>', svg_content)
+
     return svg_content
 
 def enhance_dark_mode(stats):
